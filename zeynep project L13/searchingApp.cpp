@@ -1,7 +1,7 @@
 #include <iostream>
 #include <array>
 
-// Function to find the first occurrence of an element using binary search
+
 template <typename T, std::size_t N>
 int binarySearchFirst(const std::array<T, N>& arr, T target) {
     int left = 0;
@@ -13,7 +13,7 @@ int binarySearchFirst(const std::array<T, N>& arr, T target) {
 
         if (arr[mid] == target) {
             result = mid;
-            right = mid - 1; // keep searching to the left
+            right = mid - 1;
         }
         else if (arr[mid] < target) {
             left = mid + 1;
